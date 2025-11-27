@@ -1,0 +1,60 @@
+body {
+  background-image: url(./pictures/galaxy.webp);
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#solar {
+  width: 900px;
+  height: 900px;
+  position: relative;
+}
+#sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#sun img {
+  width: 100px;
+  height: 100px;
+}
+.solars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--height);
+  height: var(--width);
+  border: 1px dashed white;
+  border-radius: 100000px;
+  animation: solars var(--orbit-duration) infinite linear;
+}
+@keyframes solars {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.solars img {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: solar var(--orbit-duration) infinite linear;
+}
+@keyframes solar {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
